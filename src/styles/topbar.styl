@@ -1,0 +1,66 @@
+@require '_variables'
+@require '_mixins'
+
+topbar
+  position fixed
+  top 0
+  left 0
+  right 0
+  background-color $color-grey-light
+  z-index $layer-lowest
+  & + viewport
+    margin-top 52px
+
+.topbar-container,
+.topbar-content
+  margin 0 auto
+
+.topbar-container
+  max-width 600px
+
+.topbar-content
+  position relative
+  padding 16px 0
+  width 90%
+  color $color-white
+  clearfix()
+  h1
+    position absolute
+    top 0
+    right 0
+    left 0
+    margin 0
+    padding 0 35px
+    font-size $font-size-md
+    line-height 57px
+    text-align center
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+    box-sizing(border-box)
+  .icon
+    position relative
+    font-size $font-size-xl
+    z-index $layer-lowest
+    &.ion-ios-arrow-back
+      display none
+  h1,
+  .icon
+    color $color-primary
+  .menu-container
+    float right
+    .menu-item-container
+      float right
+  .logo-container,
+  .logo
+    float none
+  .logo
+    display block
+    margin 0 auto
+
+.topbar-back-trigger
+  float left
+  width 26px
+  cursor pointer
+  .icon
+    display block
